@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   if (blog.image) {
     imageList =
       typeof blog.image.filePath === "string"
-        ? ["http://localhost:3000/"+ blog.image.filePath.replace("../public", "")]
+        ? ["http://localhost:3000"+ blog.image.filePath.replace("../public", "")]
         : blog.image;
   }
   const ogImages = imageList.map((img) => {
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: blog.title,
       description: blog.description,
-      url: "http://localhost:3000/" + blog.url,
+      url: "http://localhost:3000" + blog.url,
       siteName:' blog',
       locale: "en_US",
       type: "article",
@@ -61,7 +61,7 @@ export default function BlogPage({ params }) {
   if (blog.image) {
     imageList =
       typeof blog.image.filePath === "string"
-        ? ["http://localhost:3000/" + blog.image.filePath.replace("../public", "")]
+        ? ["http://localhost:3000" + blog.image.filePath.replace("../public", "")]
         : blog.image;
   }
 
@@ -76,7 +76,7 @@ export default function BlogPage({ params }) {
     "author": [{
         "@type": "Person",
         "name": blog?.author ? [blog.author] : "rafia",
-        "url": "http://localhost:3000/",
+        "url": "http://localhost:3000",
       }]
   }
 
